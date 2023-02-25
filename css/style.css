@@ -1,5 +1,4 @@
 /* start Variables */
-
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
@@ -47,7 +46,6 @@ body {
 /* End Global Rules */
   
 /* start compontants */
-  
 .container {
       padding-left: 15px;
       padding-right: 15px;
@@ -98,15 +96,16 @@ body {
 .header .logo {
     width: 60px;
 }
-    /* header links icon */
 .header .links {
     position: relative;
 }
+    /* header links icon */
 .header .links .icon {
     width: 30px ;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    cursor: pointer;
 }
 .header .links .icon span {
     height: 3px;
@@ -151,7 +150,7 @@ body {
     right: 5px;
     top: -20px
 }
-.header .links ul li:first-child::before, 
+/* .header .links ul li:first-child::before, 
 .header .links ul li:nth-last-child(2)::before, 
 .header .links ul li:last-child::before {
     display: block;
@@ -168,8 +167,8 @@ body {
 }
 .header .links ul li:last-child::before {
     content: "Contact";
-}
-.header .links li a {
+} */
+.header .links ul li a {
     display: block;
     color: #333;
     text-decoration: none;
@@ -185,6 +184,40 @@ body {
 }
 
 /* End Header */
+
+/* Start Scroll */
+.scroll {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    right: 30px;
+    bottom: 30px;
+    background-color: var(--main-color);
+    z-index: 22;
+    border-radius: 50%;
+    display: none;
+}
+
+.scroll::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    top: 27%;
+    left: 43%;
+    width: 6px;
+    height: 20px;
+
+}
+.scroll::after {
+    content: "";
+    position: absolute;
+    border: 6px solid;
+    border-color: white transparent transparent white;
+    transform: rotate(45deg);
+    top: 25%;
+    left: 35%;
+}
+/* End Scroll */
 
 /* Start Landing  */
 
